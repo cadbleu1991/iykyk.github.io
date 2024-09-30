@@ -1,0 +1,240 @@
+<html><head><base href="https://iykyk.meta/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IYKYK 💎🙌 - If You Know, You Know</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-pink: #ff00ff;
+            --dark-bg: #0a0a0a;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 20px var(--neon-blue);
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+            white-space: nowrap;
+        }
+
+        .btn {
+            background-color: transparent;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            background-color: var(--neon-blue);
+            color: var(--dark-bg);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transition: all 0.6s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 2rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .diamond-hands {
+            font-size: 5rem;
+            margin: 2rem 0;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(var(--neon-blue) 1px, transparent 1px),
+                linear-gradient(90deg, var(--neon-blue) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 1rem auto;
+            line-height: 1.6;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0.5rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .header-buttons {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                margin: 4px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-bg"></div>
+        <header>
+            <div class="logo">IYKYK 💎🙌</div>
+            <div class="header-buttons">
+                <a href="https://pump.fun/board" class="btn">Buy 💎🙌</a>
+                <a href="https://t.me/IYKYK_DiamondHands" class="btn">Join Telegram</a>
+                <a href="https://x.com/Cobratate/status/1799763487536898205" class="btn">Twitter</a>
+            </div>
+        </header>
+        
+        <div class="content">
+            <h1>Welcome to IYKYK</h1>
+            <p>If You Know, You Know - The future of memecoins on Solana</p>
+            <div class="diamond-hands">
+                <span class="float" style="animation-delay: 0s;">💎</span>
+                <span class="float" style="animation-delay: 0.5s;">🙌</span>
+            </div>
+            <p>Join the next generation of diamond hands HODLers!</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const diamondHands = document.querySelector('.diamond-hands');
+            
+            diamondHands.addEventListener('mouseover', () => {
+                diamondHands.style.transform = 'scale(1.2)';
+                diamondHands.style.transition = 'transform 0.3s ease';
+            });
+            
+            diamondHands.addEventListener('mouseout', () => {
+                diamondHands.style.transform = 'scale(1)';
+            });
+
+            // Parallax effect for grid background
+            document.addEventListener('mousemove', (e) => {
+                const gridBg = document.querySelector('.grid-bg');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                gridBg.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
+            });
+        });
+    </script>
+</body></html>
